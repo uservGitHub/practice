@@ -1,0 +1,12 @@
+$ git add --all
+$ git add *.gradle
+$ git add ./main/*.kt
+$ git add ./lib/
+$ git add "*.gradle"
+分别是：
+添加所有文件
+添加当前目录的所有 gradle文件
+添加指定目录下的所有 kt文件
+添加指定目录下的所有文件
+添加整个工程里的所有 gradle文件
+
