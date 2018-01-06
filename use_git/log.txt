@@ -1,0 +1,5 @@
+$ git log --pretty=format:"%ar %h %s" -5 -graph
+* 23 minutes ago 53635c0 rename to README.md
+* 28 minutes ago 2f0cd46 add license file
+* 32 minutes ago fc59fba create user_git's readme
+* 39 minutes ago 1ac6e92 create readme
