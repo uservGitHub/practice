@@ -1,0 +1,5 @@
+创建License文件
+$ git vi license
+$ git add license
+$ git commit -am "add license file"
+$ git push origin master
