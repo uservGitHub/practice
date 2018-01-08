@@ -1,0 +1,27 @@
+#!/usr/bin/env node
+
+var sh = require('shelljs')
+if(!sh.which('git')){
+  console.log('需要git')
+  sh.exit(1)
+}
+var directory = 'bookAndroid'
+sh.rm('-rf', directory)
+sh.mkdir(directory)
+sh.cd(directory)
+
+if(sh.exec('git clone git@github.com:uservGitHub/pt_shell.git').code !== 0){
+  sh.echo('错误: Git clone failed')
+  sh.exit(2)
+}
+
+sh.cd('pt_shell')
+if(sh.exec('git checkout -b bookAndroid origin/bookAndroid').code !== 0){
+  sh.echo('错误: Switched branch failed')
+  sh.exit(3)
+}
+
+sh.cd('..')
+sh.cd('..')
+
+console.log('执行完毕')
