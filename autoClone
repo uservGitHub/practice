@@ -15,6 +15,8 @@ if(sh.exec('git clone git@github.com:uservGitHub/pt_shell.git').code !== 0){
   sh.exit(2)
 }
 
+var pwd = sh.pwd().toString()
+
 sh.cd('pt_shell')
 if(sh.exec('git checkout -b bookAndroid origin/bookAndroid').code !== 0){
   sh.echo('错误: Switched branch failed')
@@ -27,4 +29,7 @@ if(sh.exec('git clone git@github.com:uservGitHub/refLibrary.git').code !== 0){
   sh.exit(4)
 }
 
+if(process.platform.indexOf('win') != -1){
+  sh.exec('explorer '+pwd)
+}
 console.log('成功执行')
